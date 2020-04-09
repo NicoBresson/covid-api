@@ -1,5 +1,5 @@
+import styled from 'styled-components';
 import useStats from '../utils/useStats';
-import styled from 'styled-components'
 
 const StatGrid = styled.div`
   display: grid;
@@ -17,11 +17,11 @@ const StatBlock = styled.div`
   text-align: center;
 `;
 
-const Stats = ({url}) => {
-  const {stats,loading,error} = useStats(url);
+const Stats = ({ url }) => {
+  const { stats, loading, error } = useStats(url);
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error...</p>
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error...</p>;
   return (
     <StatGrid>
       <StatBlock>
@@ -37,7 +37,7 @@ const Stats = ({url}) => {
         <span>{stats.recovered.value}</span>
       </StatBlock>
     </StatGrid>
-  )
-}
+  );
+};
 
 export default Stats;

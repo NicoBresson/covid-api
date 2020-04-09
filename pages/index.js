@@ -1,6 +1,6 @@
+import { createGlobalStyle } from 'styled-components';
 import Stats from '../components/Stats';
 import CountrySelector from '../components/CountrySelector';
-import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -8,12 +8,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const Page = () => {
-  return <div>
-    <GlobalStyle/>
-      <Stats url='https://covid19.mathdro.id/api/' />
-      <CountrySelector />
+const Page = () => (
+  <div>
+    <GlobalStyle />
+    <Stats url="https://covid19.mathdro.id/api/" />
+    <CountrySelector />
   </div>
-}
+);
 
 export default Page;
